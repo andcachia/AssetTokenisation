@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <!-- <a href="/addasset.html">Add New Asset</a> -->
+
+  <div id="header">
+    <p id="account-address"></p>
+    <p id="ether-balance"></p>
+  </div>
+
+  <div>
+    <h3>Add New Asset</h3>
+    <input type="text" id="asset-id", class="col-sm-8" placeholder="Asset Id" />
+    <input type="text" id="asset-desc", class="col-sm-8" placeholder="Asset Description" />
+    <input type="number" id="num-tokens", class="col-sm-8" placeholder="Number of Tokens" />
+    <input type="number" id="price-per-token", class="col-sm-8" placeholder="Price Per Token" />
+
+    <a href="#" onclick="addNewAsset()" class="btn btn-primary">Submit</a>
+  </div>
+
+  <div>
+    <h3>Search Asset: </h3>
+    <input type="text" id="search-asset-id", class="col-sm-8" placeholder="Enter the asset Id" />&nbsp;
+    <a href="#" onclick="getAssetDetails()" class="btn btn-primary">Lookup</a>
+    <div class="asset-details row text-left">
+      <div id="asset-desc" class="margin-top-3 col-md-12">-</div>
+      <div id="avail-tokens" class="margin-top-3 col-md-12">-</div>
+      <div id="tokens-price" class="col-md-12">-</div>
+      <div id="account-tokens" class="col-md-12">-</div>
+    </div>
+  </div>
+
+  <div>
+    <h3>Buy Asset Tokens</h3>
+    <input type="text" id="buy-asset-id", class="col-sm-8" placeholder="Enter the asset Id" />
+    <input type="text" id="buy-asset-amount", class="col-sm-8" placeholder="Enter the number of tokens" />
+    <a href="#" onclick="buyAsset()" class="btn btn-primary">Purchase</a>
+  </div>
+
+  <div>
+    <h3>Sell Asset Tokens</h3>
+    <input type="text" id="sell-asset-id", class="col-sm-8" placeholder="Enter the asset Id" />
+    <input type="text" id="sell-asset-tokens", class="col-sm-8" placeholder="Enter the number of tokens" />
+    <a href="#" onclick="sellAsset()" class="btn btn-primary">Sell</a>
+  </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="../app.js"></script>
+</html>

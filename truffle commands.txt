@@ -1,0 +1,3 @@
+AssetTokenisation.deployed().then(function(contractInstance) {contractInstance.getAssetDetails("1111", {from: web3.eth.accounts[0], gas: 140000}).then(function(v) {console.log(v);})});
+
+AssetTokenisation.deployed().then(function(contractInstance) {contractInstance.buy("1111",{value: web3.toWei('10', 'ether'), from: "0xe806949368b1131562673eb20b74f59fc6cbbec9"})})
